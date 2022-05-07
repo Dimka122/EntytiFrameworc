@@ -12,6 +12,7 @@ namespace EntytiFrame.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Linq;
     
     public partial class DriveEntities : DbContext
     {
@@ -22,9 +23,20 @@ namespace EntytiFrame.Model
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            modelBuilder.Entity<Client>()
+                .Property(e => e.ClientName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Client>()
+                .Property(e => e.ClientAdress)
+                .IsUnicode(false);
+
+            //modelBuilder.Entity<Client>()
+            //    .Property(e => e.ClientNumber)
+            //    .IsUnicode(false);
+
         }
-    
+
         public virtual DbSet<Client> Client { get; set; }
     }
 }

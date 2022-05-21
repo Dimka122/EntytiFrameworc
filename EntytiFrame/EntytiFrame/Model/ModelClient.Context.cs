@@ -19,6 +19,8 @@ namespace EntytiFrame.Model
         public DriveEntities()
             : base("name=DriveEntities")
         {
+            Database.SetInitializer(
+                new DropCreateDatabaseIfModelChanges<DriveEntities>());
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

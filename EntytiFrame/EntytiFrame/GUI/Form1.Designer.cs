@@ -1,4 +1,6 @@
-﻿namespace EntytiFrame
+﻿using System.Data;
+
+namespace EntytiFrame
 {
     partial class Form1
     {
@@ -168,6 +170,8 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToOrderColumns = true;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClientId,
@@ -251,18 +255,18 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.DataGridView dataGridView;
         //private DriveEntitiesTableAdapters.ClientTableAdapter clientTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientAdressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientSummaDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn clientNumberDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn clientAdressDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn clientSummaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientSumma;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientAdress;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
 

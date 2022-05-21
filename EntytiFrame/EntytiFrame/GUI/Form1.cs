@@ -37,7 +37,7 @@ namespace EntytiFrame
                     {
                         db.Client.Add(client);
                     }
-                    db.SaveChanges();
+                db.SaveChanges();
                     ClearData();
                     SetDataInGridView();
                 
@@ -65,6 +65,7 @@ namespace EntytiFrame
         private void Form1_Load(object sender, EventArgs e)
         {
             
+             
             ClearData();
             SetDataInGridView();
             int x = 15, y = 130;
@@ -82,13 +83,14 @@ namespace EntytiFrame
                 }
 
             }
+            
 
         }
 
         private void SetDataInGridView()
         {
             dataGridView.AutoGenerateColumns = false;
-            dataGridView.DataSource = db.Client.ToList<Client>();
+            //dataGridView.DataSource = db.Client.ToList();
             //BindingList<Client> clients = new BindingList<Client>();
         }
 
